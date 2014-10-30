@@ -17,3 +17,11 @@ you should add Ruby to your toolbox.
 image_url: 'ruby.jpeg',
 price: 49.95)
 # . . .
+Product.create!(title: 'Cocaine',
+description:
+%{<p>
+Just for fun.
+</p>},
+image_url: 'cocaine.jpg',
+price: 100)
+# . . .
