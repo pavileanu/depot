@@ -20,10 +20,13 @@
  	font: small-caps 40px/40px "Times New Roman", serif;
  	color: #282;
  	text-align: center;
- 	img {
+ 
+ }
+#banner 	img {
  		float: left;
  	}
- }
+
+
  #notice {
  	color: #000 !important;
  	border: 2px solid red;
@@ -35,26 +38,50 @@
  #columns {
  	/*background: #141;*/
  	display: table;
- 	}
- 	#main{
- 		/*margin-left: 17em;*/
- 		padding: 1em;
- 		background: white;
- 		float:left;
-    }
- 	#side {
- 		float: left;
- 		padding: 1em 2em;
- 		width: 13em;
- 		background: #141;
+ }
+ #main{
+ 	/*margin-left: 17em;*/
+ 	padding: 1em;
+ 	background: white;
+ 	float:left;
+ }
+ #side {
+ 	float: left;
+ 	padding: 1em 2em;
+ 	width: 13em;
+ 	background: #141;
 
- 	}
- 	#side	ul {
- 			padding: 0;}
- 		#side	li {
- 				list-style: none;}
+ }
+ #side	ul {
+ 	padding: 0;}
+ 	#side	li {
+ 		list-style: none;}
  		#side		a {
- 					color: #bfb;
- 					font-size: small;
- 				}
- 
+ 			color: #bfb;
+ 			font-size: small;
+ 		}
+
+
+ 		/*form, div {
+ 			display: inline;
+ 		}
+ 		input {
+ 			font-size: small;
+ 		}*/
+ 		#cart {
+ 			font-size: smaller;
+ 			color: white;}
+ 			#cart	table {
+ 				border-top:
+ 				1px dotted #595;
+ 				border-bottom: 1px dotted #595;
+ 				margin-bottom: 10px;
+ 			}
+ 			#cart	ul {
+ 				padding: 0;}
+ 				#cart	li {
+ 					list-style: none;}
+ 					#cart	a {
+ 						color: #bfb;
+ 						font-size: small;
+ 					}

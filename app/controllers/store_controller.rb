@@ -1,10 +1,12 @@
 class StoreController < ApplicationController
-	before_action :log_on_this_page, only: :index
+	before_action :set_cart, :log_on_this_page, only: :index
+	include CurrentCart
 	def index
 		@products = Product.order(:title)
 		@number_of_logs = session[:counter] 
 	end
-
+# se apeleaza din concern :set_cart si afiseaza mereu un nou 
+# obiect @cart 
 
 	private
 	def log_on_this_page
