@@ -20,11 +20,11 @@
  	font: small-caps 40px/40px "Times New Roman", serif;
  	color: #282;
  	text-align: center;
- 
+
  }
-#banner 	img {
- 		float: left;
- 	}
+ #banner 	img {
+ 	float: left;
+ }
 
 
  #notice {
@@ -67,21 +67,56 @@
  		}
  		input {
  			font-size: small;
- 		}*/
- 		#cart {
- 			font-size: smaller;
- 			color: white;}
- 			#cart	table {
- 				border-top:
- 				1px dotted #595;
- 				border-bottom: 1px dotted #595;
- 				margin-bottom: 10px;
- 			}
- 			#cart	ul {
- 				padding: 0;}
- 				#cart	li {
- 					list-style: none;}
- 					#cart	a {
- 						color: #bfb;
- 						font-size: small;
- 					}
+ 			}*/
+ 			#cart {
+ 				font-size: smaller;
+ 				color: white;}
+ 				#cart	table {
+ 					border-top:
+ 					1px dotted #595;
+ 					border-bottom: 1px dotted #595;
+ 					margin-bottom: 10px;
+ 				}
+ 				#cart	ul {
+ 					padding: 0;}
+ 					#cart	li {
+ 						list-style: none;}
+ 						#cart	a {
+ 							color: #bfb;
+ 							font-size: small;
+ 						}
+
+
+
+ 						.depot_form 
+ 						fieldset {
+ 							background: #efe;}
+ 							.depot_form  legend {
+ 								color: #dfd;
+ 								background: #141;
+ 								font-family: sans-serif;
+ 								padding: 0.2em 1em;
+ 							}
+ 							
+ 							
+ 							form	label {
+ 									width: 5em;
+ 									float: left;
+ 									text-align: right;
+ 									padding-top: 0.2em;
+ 									margin-right: 0.1em;
+ 									display: block;
+ 								}
+ 							form	select, textarea, input {
+ 									margin-left: 0.5em;
+ 								}
+ 							form	.submit {
+ 									margin-left: 4em;
+ 								}
+ 							form	br {
+ 									display: none
+ 								}
+ 						
+ 						    .orders input[type="submit"]:first-child{
+ 						    	display: none
+ 						    }
