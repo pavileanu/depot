@@ -120,3 +120,7 @@
  						    .orders .checkout{
  						    	display: none
  						    }
+
+ 						    .logged{
+ 						    	color: yellow;
+ 						    }

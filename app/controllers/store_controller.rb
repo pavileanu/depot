@@ -1,4 +1,5 @@
 class StoreController < ApplicationController
+	skip_before_action :authorize
 	before_action :set_cart, :log_on_this_page, only: :index
 	include CurrentCart
 	def index
