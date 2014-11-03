@@ -8,7 +8,14 @@
 </head>
 <body class="<%= controller.controller_name %>">
 	<div id="banner">
-		<%= image_tag("logo.png") %>
+		<%= form_tag store_path, class: 'locale' do %>
+			<%= select_tag 'set_locale',
+			options_for_select(LANGUAGES, I18n.locale.to_s),
+			onchange: 'this.form.submit()' %>
+			<%= submit_tag 'submit' %>
+			<%= javascript_tag "$('.locale input').hide()" %>
+		<% end %>
+        <%= image_tag("logo.png") %>
 		<%= @page_title || "Pragmatic Bookshelf" %>
 	</div>
 	<div id="columns">
@@ -16,24 +23,24 @@
 
 		<div id="side">
 			<ul>
-				<li><a href="/">Home_Store</a></li>
-				<li><%= link_to "MyCart", Cart.last %></li>
+				<li><a href="/"><%= t('.Home')%></a></li>
+				<li><%= link_to t("MyCart"), Cart.last %></li>
 				<% unless session[:user_id] %>
-				    <li><%= link_to "Register", new_user_path %></li>
-				    <li><a href="/login">Log in</a></li>
+				    <li><%= link_to t("Register"), new_user_path %></li>
+				    <li><a href="/login"><%= t("LogIn") %></a></li>
 			    <% else %>
-				    <li><%= link_to "Log Out", logout_path, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+				    <li><%= link_to t("LogOut"), logout_path, method: :delete, data: { confirm: 'Are you sure?' } %></li>
                 <% end %>
                 
 				
 			</ul>
             <% if session[:user_id] %>
                 <ul>
-					<li><%= link_to 'Orders', orders_path%></li>
-					<li><%= link_to 'Products', products_path %></li>
-					<li><%= link_to 'Users', users_path %></li>
+					<li><%= link_to t('Orders'), orders_path%></li>
+					<li><%= link_to t('Products'), products_path %></li>
+					<li><%= link_to t('Users'), users_path %></li>
 				</ul>
-					<%= button_to 'Logout', logout_path, method: :delete %>
+					<%= button_to t('LogOut'), logout_path, method: :delete %>
 			<% end %>
 
 			<% if session[:user_id] %>

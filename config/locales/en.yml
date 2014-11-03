@@ -19,5 +19,16 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
+
 en:
-  hello: "Hello world"
+  Home: 'Home Store'
+  MyCart: 'My Cart'   
+  LogOut: 'Log out'
+  LogIn:  'Log in'
+  Orders:  'Orders'
+  Products: 'Products'
+  Users: 'Users'
+  Register: 'Register'
+
+
+

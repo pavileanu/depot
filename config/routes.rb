@@ -5,13 +5,18 @@ Rails.application.routes.draw do
     post 'login' => :create
     delete 'logout' => :destroy
   end
+  
+
+  scope '(:locale)' do
+    resources :orders
+    resources :line_items
+    resources :carts
+    root 'store#index', as: 'store', via: :all
+
+  end
+
   resources :users
 
-  resources :orders
-
-  resources :line_items
-
-  resources :carts
 
   get 'store/index'
 
@@ -19,7 +24,7 @@ Rails.application.routes.draw do
     get :who_bought, on: :member
   end
 
-  root 'store#index', as: 'store'
+  
 
 
   # The priority is based upon order of creation: first created -> highest priority.
