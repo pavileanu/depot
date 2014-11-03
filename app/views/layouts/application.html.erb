@@ -28,8 +28,7 @@
 				<% unless session[:user_id] %>
 				    <li><%= link_to t("Register"), new_user_path %></li>
 				    <li><a href="/login"><%= t("LogIn") %></a></li>
-			    <% else %>
-				    <li><%= link_to t("LogOut"), logout_path, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+			   
                 <% end %>
                 
 				
@@ -43,9 +42,8 @@
 					<%= button_to t('LogOut'), logout_path, method: :delete %>
 			<% end %>
 
-			<% if session[:user_id] %>
-		        <p class="logged"> Logged with <%= session[:user_id] %> </p>
-		    <% end %>
+		        <p class="logged"> <%= @username %> </p>
+		
 			<% if @cart %>
 			<%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
 			     <%= render @cart %>
