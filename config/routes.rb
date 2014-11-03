@@ -7,13 +7,7 @@ Rails.application.routes.draw do
   end
   
 
-  scope '(:locale)' do
-    resources :orders
-    resources :line_items
-    resources :carts
-    root 'store#index', as: 'store', via: :all
 
-  end
 
   resources :users
 
@@ -24,7 +18,13 @@ Rails.application.routes.draw do
     get :who_bought, on: :member
   end
 
-  
+  scope '(:locale)' do
+    resources :orders
+    resources :line_items
+    resources :carts
+    root 'store#index', as: 'store', via: :all
+
+  end
 
 
   # The priority is based upon order of creation: first created -> highest priority.

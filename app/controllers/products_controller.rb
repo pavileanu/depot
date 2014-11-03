@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-
+  skip_before_action :set_i18n_locale_from_params
   # GET /products
   # GET /products.json
   def index
