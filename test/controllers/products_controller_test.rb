@@ -12,6 +12,7 @@ class ProductsControllerTest < ActionController::TestCase
       price:
       19.95
     }
+    @product_empty = products(:chocolate)
   end
 
   test "should get index" do
@@ -49,9 +50,9 @@ class ProductsControllerTest < ActionController::TestCase
   end
 
   test "should destroy product" do
-     # @product.line_items = nil    ????????
+
       assert_difference('Product.count', -1) do
-        delete :destroy, id: @product
+        delete :destroy, id: @product_empty
       end
 
       assert_redirected_to products_path

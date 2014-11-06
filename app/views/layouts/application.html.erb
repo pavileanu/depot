@@ -23,8 +23,8 @@
 
 		<div id="side">
 			<ul>
-				<li><a href="/"><%= t('.Home')%></a></li>
-				<li><%= link_to t("MyCart"), Cart.last %></li>
+				<li><a href="/"><%= t('Store')%></a></li>
+		
 				<% unless session[:user_id] %>
 				    <li><%= link_to t("Register"), new_user_path %></li>
 				    <li><a href="/login"><%= t("LogIn") %></a></li>

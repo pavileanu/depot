@@ -1,5 +1,5 @@
 es:
-  Home: 'Portada de la tienda'
+  Store: 'Portada de la tienda'
   MyCart: 'Mi carrito'   
   LogOut: 'Finalizar la sesión'
   LogIn: 'Iniciar sesión'
