@@ -28,8 +28,7 @@
 				<% unless session[:user_id] %>
 				    <li><%= link_to t("Register"), new_user_path %></li>
 				    <li><a href="/login"><%= t("LogIn") %></a></li>
-			   
-                <% end %>
+			    <% end %>
                 
 				
 			</ul>
@@ -52,6 +51,9 @@
 		</div>
 		<div id="main">
 			<%= yield %>
+		</div>
+		<div id="footer">
+            <%= yield :footer %>
 		</div>
 	</div>
 </body>

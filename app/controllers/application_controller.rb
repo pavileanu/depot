@@ -6,12 +6,17 @@ class ApplicationController < ActionController::Base
 
 
  def user_name
+  begin 
    if session[:user_id]
       user = User.find(session[:user_id])
       @username = "Logged as #{user.name}"
    else
       @username = ''
    end
+  rescue ActiveRecord::RecordNotFound
+      @username = ''
+      session[:user_id] = nil
+  end 
 end
 
 

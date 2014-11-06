@@ -89,15 +89,16 @@ font-family: sans-serif;
 padding: 0.2em 1em;
 }
 form	label {
-width: 5em;
-float: left;
-text-align: right;
+/*width: 5em;
 padding-top: 0.2em;
 margin-right: 0.1em;
-display: block;
+display: block;*/
+text-align: right;
+
 }
 form	select, textarea, input {
 margin-left: 0.5em;
+display: block;
 }
 form	.submit {
 margin-left: 4em;
