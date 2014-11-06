@@ -1,13 +1,34 @@
+require './app/store'
 Rails.application.routes.draw do
-  resources :line_items
+  
+  match 'catalog' => StoreApp.new, via: :all
 
-  resources :carts
+  get 'admin' => 'admin#index'
+  controller :sessions do
+    get 'login' => :new
+    post 'login' => :create
+    delete 'logout' => :destroy
+  end
+  
+
+
+
+  resources :users
+
 
   get 'store/index'
 
-  resources :products
+  resources :products do
+    get :who_bought, on: :member
+  end
 
-  root 'store#index', as: 'store'
+  scope '(:locale)' do
+    resources :orders
+    resources :line_items
+    resources :carts
+    root 'store#index', as: 'store', via: :all
+
+  end
 
 
   # The priority is based upon order of creation: first created -> highest priority.

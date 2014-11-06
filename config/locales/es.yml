@@ -1,0 +1,18 @@
+es:
+  Store: 'Portada de la tienda'
+  MyCart: 'Mi carrito'   
+  LogOut: 'Finalizar la sesión'
+  LogIn: 'Iniciar sesión'
+  Orders: 'Ordenes'
+  Products: 'Productos'
+  Users: 'Usuarios'
+  Register: 'Registro'
+
+  number:
+    currency:
+      format:
+        unit: "$"
+        precision: 2
+        separator: "."
+        delimiter: ","
+        format: "%u%n"
