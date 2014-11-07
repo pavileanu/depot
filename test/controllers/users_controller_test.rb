@@ -3,6 +3,8 @@ require 'test_helper'
 class UsersControllerTest < ActionController::TestCase
   setup do
     @user = users(:one)
+    @user_with_img = {name: 'samy', password: 'secret',
+       password_confirmation: 'secret'}
   end
 
   test "should get index" do
@@ -47,5 +49,13 @@ class UsersControllerTest < ActionController::TestCase
     end
 
     assert_redirected_to users_path
+  end
+
+  test "should create an user with an image" do
+    assert_difference 'User.count.to_i + Image.count.to_i', 2 do
+      post :create, user: @user_with_img , 
+                         uploaded_picture: { uploaded_picture: { name: 'ruby.jpeg', type: 'image/jpeg', data: 'adwaudhaw' }}
+      end
+      assert_redirected_to users_path
   end
 end

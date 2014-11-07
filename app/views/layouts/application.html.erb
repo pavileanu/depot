@@ -24,7 +24,7 @@
 		<div id="side">
 			<ul>
 				<li><a href="/"><%= t('Store')%></a></li>
-		
+		        
 				<% unless session[:user_id] %>
 				    <li><%= link_to t("Register"), new_user_path %></li>
 				    <li><a href="/login"><%= t("LogIn") %></a></li>
@@ -34,6 +34,7 @@
 			</ul>
             <% if session[:user_id] %>
                 <ul>
+					<li><%= link_to t("Edit"), edit_user_path(session[:user_id]) %></li>
 					<li><%= link_to t('Orders'), orders_path%></li>
 					<li><%= link_to t('Products'), products_path %></li>
 					<li><%= link_to t('Users'), users_path %></li>

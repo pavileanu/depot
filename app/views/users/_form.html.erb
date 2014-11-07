@@ -1,34 +1,50 @@
 <div class="depot_form">
-<%= form_for(@user) do |f| %>
+  <%= form_for @user, html: {multipart: true} do |f| %>
   <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+  <div id="error_explanation">
+    <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
-      <ul>
+    <ul>
       <% @user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+      <li><%= message %></li>
       <% end %>
-      </ul>
-    </div>
+    </ul>
+  </div>
   <% end %>
-<fieldset>
-<legend>Enter User Details</legend>
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :password %><br>
-    <%= f.password_field :password %>
-  </div>
-  <div class="field">
-    <%= f.label :password_confirmation %><br>
-    <%= f.password_field :password_confirmation %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-
+  <fieldset>
+    <legend>Enter User Details</legend>
+      <div class="left-profile"> 
+       <div> 
+       <% if @user.image %>
+           <%= render partial: 'image/image' ,
+                   object: @user.image %> 
+       
+       <% else %>
+          <%= render partial: 'image/image' ,
+                   object: Image.new %> 
+       <% end %>
+       </div>
+       Upload a picture: <%= f.file_field("uploaded_picture") %><br/> 
+     
+      </div>
+    <div class="right-profile"> 
+      <div class="field">
+        <%= f.label :name %><br>
+        <%= f.text_field :name %>
+      </div>
+      <div class="field">
+        <%= f.label :password %><br>
+        <%= f.password_field :password %>
+      </div>
+      <div class="field">
+        <%= f.label :password_confirmation %><br>
+        <%= f.password_field :password_confirmation %>
+      </div>
+      <div class="actions">
+        <%= f.submit %>
+      </div>
+    </div>
   </fieldset>
+
 <% end %>
 </div>

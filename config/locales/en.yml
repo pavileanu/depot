@@ -22,7 +22,7 @@
 
 en:
   Store: 'Store'
-  MyCart: 'My Cart'   
+  Edit: 'Edit Profile'   
   LogOut: 'Log out'
   LogIn:  'Log in'
   Orders:  'Orders'

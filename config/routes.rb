@@ -13,8 +13,11 @@ Rails.application.routes.draw do
 
 
 
-  resources :users
-
+  resources :users do
+    member do
+      get 'picture'
+    end
+  end
 
   get 'store/index'
 

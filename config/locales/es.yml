@@ -1,6 +1,6 @@
 es:
   Store: 'Portada de la tienda'
-  MyCart: 'Mi carrito'   
+  Edit: 'Editar perfil'   
   LogOut: 'Finalizar la sesión'
   LogIn: 'Iniciar sesión'
   Orders: 'Ordenes'
