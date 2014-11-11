@@ -1,0 +1,12 @@
+
+<p>
+    <% if image.id %>   
+    	<p class="profileimage">  <b>Image Name:</b><br/> <%= image.name %>  </p>
+
+        <p class="profileimage">  <b>Image Type:</b><br/>    <%= image.type1 %></p>
+
+        <img src="<%= url_for(:action => 'picture', :id => image.id) %>" />
+    <% else %>
+        <%= image_tag('noimage.jpeg') %>
+    <% end %>
+</p>

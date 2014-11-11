@@ -116,13 +116,24 @@ color: yellow;
 float: right;
 margin: -0.25em 0.1em;
 }
- 					a{
- 						text-decoration: none;
- 						font-size: 15px;
- 						margin-top:10px;
- 					}
+a{
+	text-decoration: none;
+	font-size: 15px;
+	margin-top:10px;
+}
 
- 					li{
- 						margin-top:6px;
+li{
+	margin-top:6px;
+}
 
- 					}
+.left-profile{
+	float:left;
+
+}
+.right-profile{
+	
+	float:left;
+}
+.left-profile img{
+	max-width: 100%
+}
